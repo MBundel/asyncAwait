@@ -21,11 +21,30 @@ end = () => {
 }
 
 doMySync = async () =>{
-
             iAm();
    await    firstName();
             lastName();
             end();
-
 }
-doMySync()
+doItTwice = async ()=> {
+    await doMySync()
+    await doMySync()
+}
+doItTwice().catch((err)=>{console.log(err)})
+
+// doMySync().then(() => {
+//     // Handle any post-execution logic here
+// }).catch(error => {
+//     console.error("Error during execution:", error);
+// });
+//
+// const anotherFunction = async () => {
+//     try {
+//         await doMySync();
+//     } catch (error) {
+//         console.error("Ein Fehler ist beim Aufruf von doMySync aufgetreten:", error);
+//     }
+// }
+// anotherFunction()
+
+
